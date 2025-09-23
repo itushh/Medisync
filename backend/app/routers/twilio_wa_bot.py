@@ -21,7 +21,7 @@ async def respond_temp(From: str = Form(...), Body: str = Form(...)):
     `Body` = message text
     """
     try:
-        client.messages.create(
+        twilio_client.messages.create(
             # body=f"You said: {Body}.",
             body="Hey! please integrate gemini first.",
             from_=f'whatsapp:{twilio_mob}',
