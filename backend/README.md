@@ -1,7 +1,9 @@
-### Guide to clone
+### Guide to fork
+
+visit <a href="https://github.com/itushh/Medisync">itushh/Medisync github</a>, click fork.
 
 ```
-git clone https://github.com/itushh/Medisync.git
+git clone https://github.com/<your_github_username>/Medisync.git
 ```
 
 ```
@@ -23,7 +25,7 @@ source xenv/bin/activate
 
 ```
 #Windows
-venv\Scripts\Activate
+xenv\Scripts\Activate
 ```
 
 ```
