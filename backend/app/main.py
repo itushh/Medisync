@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Server if fucking live!"}
+    return {"message": "Server is live!"}
 
 @app.get("/protected")
 def protected_route(current_user: dict = Depends(get_current_user)):
