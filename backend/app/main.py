@@ -1,5 +1,5 @@
 import os
-import logging
+from app.lib.logger import logger
 from fastapi import FastAPI, Depends, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,13 +8,6 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from app.routers import admin_auth, twilio_wa_bot
 from app.auth.dependencies import get_current_user
 from dotenv import load_dotenv
-
-# config logging
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
-)
-logger = logging.getLogger(__name__)
 
 load_dotenv()
 app = FastAPI(title="Medisync Server")
