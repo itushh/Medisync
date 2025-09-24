@@ -3,7 +3,7 @@ from app.models.admin import AdminLogin, Token
 from app.lib.supabase_client import supabase
 from app.auth.jwt_handler import create_access_token
 
-router = APIRouter(prefix="/admin", tags=["admin"])
+router = APIRouter()
 
 @router.post("/login", response_model=Token)
 def login(admin: AdminLogin, response: Response):

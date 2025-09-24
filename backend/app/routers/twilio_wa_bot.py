@@ -8,7 +8,7 @@ load_dotenv()
 
 twilio_mob = os.getenv("TWILIO_TEMP_NUMBER")
 
-router = APIRouter(prefix="/twilio/whatsapp", tags=["whatsapp"])
+router = APIRouter()
 
 
 # 
