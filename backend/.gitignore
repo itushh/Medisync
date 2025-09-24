@@ -35,6 +35,3 @@ htmlcov/
 
 # Uvicorn reload artifacts
 *.pid
-
-twilio_trial.py
-gemini_trial.py
