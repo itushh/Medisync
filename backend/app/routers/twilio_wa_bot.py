@@ -56,6 +56,19 @@ async def respond(From: str = Form(...), Body: str = Form(...)):
     Twilio webhook.
     Uses Gemini to generate a reply from the incoming message body.
     """
+    
+    # text typing...
+    try:
+        send_whatsapp_message(
+            to=From,
+            body="typing..."
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to send message: {e}"
+        )
+    
     gemini_response = generate(Body)
 
     if gemini_response.get("status") == "error":
